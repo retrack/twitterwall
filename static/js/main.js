@@ -2,7 +2,7 @@
 if (document.location.host === "twitterwall.creal.de")
 	var socket = io.connect('http://twitterwall.creal.de');
 else
-	var socket = io.connect('http://localhost');
+	var socket = io.connect(window.location.hostname);
 
 var whereToLoadPriorities = [1,1,1, 1,1,1];
 whereToLoadPriorities[parseInt(Math.random() * 6)] = 0; /* randomize initial position */
